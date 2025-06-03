@@ -8,7 +8,11 @@ function App() {
   const [clima, setClima] = useState('Soleado')
 
   const cambiarUnidad = () => {
-    setUnidad('Fahrenheit')
+    if (unidad === 'Celsius') {
+      setUnidad('Fahrenheit')
+    } else {
+      setUnidad('Celsius')
+    }
   }
 
   const cambiarClima = (estado) => {
