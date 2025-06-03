@@ -19,10 +19,15 @@ function App() {
     setClima(estado)
   }
 
+  const reset = () => {
+    setUnidad('Celsius')
+    setClima('Soleado')
+  }
+
   return (
     <div className="container">
       <h1>Estado del tiempo</h1>
-      <Controles onCambiarUnidad={cambiarUnidad} onCambiarClima={cambiarClima}/>
+      <Controles onCambiarUnidad={cambiarUnidad} onCambiarClima={cambiarClima} onReset={reset}/>
       <Display unidad={unidad} clima={clima}/>
     </div>
   )
